@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "59e3073594324f3dd58aaa655c696b77",
+    "content-hash": "661249b5d4fe9e6ac4519f6de8d8a065",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -3822,24 +3822,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/sendgrid-email-delivery-simplified/"
-        },
-        {
-            "name": "wpackagist-plugin/wordfence",
-            "version": "6.3.22",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/wordfence/",
-                "reference": "tags/6.3.22"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordfence.6.3.22.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/wordfence/"
         }
     ],
     "packages-dev": [
