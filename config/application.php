@@ -128,7 +128,6 @@ define('NONCE_SALT', env('NONCE_SALT'));
 /**
  * Custom Settings
  */
-define('FS_METHOD', 'direct');
 define('AUTOMATIC_UPDATER_DISABLED', true);
 define('DISALLOW_FILE_EDIT', true);
 define('DISALLOW_FILE_MODS', true);
