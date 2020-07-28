@@ -83,7 +83,7 @@ if (file_exists($env_config)) {
 /**
  * URLs
  */
-if (array_key_exists('HTTP_X_FORWARDED_PROTO', $_SERVER) && $_SERVER["HTTP_X_FORWARDED_PROTO"] == 'https') {
+if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER["HTTP_X_FORWARDED_PROTO"] == 'https') {
     $_SERVER['HTTPS'] = 'on';
 }
 $_http_host_schema = array_key_exists('HTTPS', $_SERVER) && $_SERVER['HTTPS'] == 'on' ? 'https' : 'http';
