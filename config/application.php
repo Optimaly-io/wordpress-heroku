@@ -83,15 +83,13 @@ if (file_exists($env_config)) {
 /**
  * URLs
  */
-if (array_key_exists('HTTP_X_FORWARDED_PROTO', $_SERVER) && $_SERVER["HTTP_X_FORWARDED_PROTO"] == 'https') {
+if (strpos($_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') !== true) {
     $_SERVER['HTTPS'] = 'on';
 }
 $_http_host_schema = array_key_exists('HTTPS', $_SERVER) && $_SERVER['HTTPS'] == 'on' ? 'https' : 'http';
 $_http_host_name = array_key_exists('HTTP_HOST', $_SERVER) ? $_SERVER['HTTP_HOST'] : 'localhost';
 $_server_http_url = $_http_host_schema."://".$_http_host_name;
 
-// define('WP_HOME', "https://optimaly.io");
-// define('WP_SITEURL', "https://optimaly.io/wp");
 define('WP_HOME', env('WP_HOME') ?: $_server_http_url);
 define('WP_SITEURL', env('WP_SITEURL') ?: $_server_http_url."/wp");
 
